@@ -5,7 +5,7 @@ from git import Repo
 
 app = Flask(__name__)
 
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "").strip()
 REPO_URL = f"https://{GITHUB_TOKEN}@github.com/DanielSilva22/cristal-semantique-core1.git"
 LOCAL_REPO = "/tmp/gpt-dispatcher"
 
